@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+ul{
+    list-style: none;
+}
+@media  (max-width: 600px) {
+    .navbar {
+        flex-direction: column; /* Aligne les éléments verticalement */
+        align-items: flex-start; /* Aligne à gauche */
+        height: 20%;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Aligne les liens verticalement */
+        width: 100%; /* Prend toute la largeur */
+        
+    }
+
+    .nav-links li {
+        margin: 0; /* Espace vertical entre les liens */
+    }
+    .image-logo{
+    
+        align-content: start; /* Aligne à gauche */
+    }
+}
+
+@media (max-width: 600px){
+    #products{
+        
+            flex-direction: column; /* Aligne les divs verticalement */
+    }
+    .product-card{
+            margin: 10px 0; /* Espace vertical entre les divs **/
+    }
+}
+header {
+    position: fixed;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    color: white;
+    z-index: 1000;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: solid 1px #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00ffcc;
+}
+
+input{
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+   
+}
+.image-logo{
+    width: 50px;
+    height: 50px;
+}
+
+
+.hero {
+    background: url('images/OIP.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 60px; /* Pour éviter que le texte soit caché par la barre de navigation */
+}
+
+.cta-button {
+    background: #00ffcc;
+    color: black;
+    padding: 10px 20px ;
+    margin-top: -70px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.button-container {
+    margin-top: 60px; /* Pousse le bouton vers le bas */
+}
+
+.cta-button:hover {
+    background: #00cc99;
+}
+
+.products {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.product-card {
+    background: #6456b3;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#products{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.produit-pop{
+    width: 200px; /* Largeur fixe pour toutes les images */
+    height: 200px; /* Hauteur fixe pour toutes les images */
+    overflow: hidden; /* Cache les parties de l'image qui débordent */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour l'effet de profondeur */
+    transition: box-shadow 0.3s ease; /* Transition pour l'ombre */
+}
+.produit-pop img{
+    width: 100%; /* Remplit toute la largeur */
+    height: 100%; /* Remplit toute la hauteur */
+    object-fit: cover; /* Garde les proportions de l'image */
+    transition: filter 0.3s ease; /* Transition pour l'effet d'illumination */
+}
+
+.produit-pop:hover{
+    box-shadow: 0 23px 36px rgba(0, 255, 204, 0.6); /* Ombre plus intense au survol */
+
+}
+.produit-pop:hover img {
+    filter: brightness(1.2); /* Illumine l'image au survol */
+}
+h3 {
+    font-family: 'Arial', sans-serif; /* Utilise une police moderne */
+    font-size: 24px; /* Taille du texte */
+    color: #00ffcc; /* Couleur verte néon */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre pour effet de profondeur */
+    background: linear-gradient(90deg, #00ffcc, #0099cc); /* Dégradé */
+    -webkit-background-clip: text; /* Clip de fond pour le texte */
+    -webkit-text-fill-color: transparent; /* Remplit le texte avec le dégradé */
+    padding: 10px; /* Ajout d'un peu d'espace autour du titre */
+    border-radius: 5px; /* Coins arrondis */
+    transition: transform 0.3s ease; /* Transition pour l'animation */
+}
+
+h3:hover {
+    transform: scale(1.1); /* Zoom au survol */
+}
+
+
+
